@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="80dp" android:padding="8dp"
+                                                   android:id="@+id/noteBar" android:background="#FFFFFF">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="15dp" android:id="@+id/noteTitle"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="48dp" android:layout_marginTop="4dp" android:textStyle="bold"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/noteBody"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/noteTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTitle" android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_wrapBehaviorInParent="vertical_only" android:maxLines="2"
+            android:layout_marginEnd="16dp"/>
+    <Button
+            android:text="D"
+            android:layout_width="30dp"
+            android:layout_height="45dp" android:id="@+id/deleteButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            android:textSize="12sp" android:autoText="false" android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/noteBody" android:padding="0dp" android:paddingLeft="0dp"
+            android:paddingTop="0dp" android:paddingEnd="0dp" android:paddingRight="0dp" android:paddingBottom="0dp"
+            app:layout_constraintHorizontal_bias="0.413" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

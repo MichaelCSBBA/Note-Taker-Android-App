@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout-land/fragment_list_screen.xml" value="0.46927083333333336" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/fragment_1.xml" value="0.2234375" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/fragment_list.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/fragment_list_screen.xml" value="0.3048128342245989" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/fragment_word.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/layout/word_item.xml" value="0.25" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/menu/action_menu.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/AndroidTest/FlashCards2/app/src/main/res/menu/bottom_nav.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout-land/activity_main.xml" value="0.35315315315315315" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout-land/fragment_add_screen.xml" value="0.5" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout-land/fragment_list_screen.xml" value="0.33" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout-land/fragment_view_screen.xml" value="0.3864864864864865" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/fragment_add_screen.xml" value="0.33" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/fragment_list_screen.xml" value="0.25" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/fragment_view_screen.xml" value="0.5" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/fragment_view_screen2.xml" value="0.2234375" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/note_item.xml" value="0.75" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/layout/word_item.xml" value="0.5" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/menu/action_menu.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11666666666666667" />
+        <entry key="..\:/Users/Mike/Desktop/School Terms/Winter 2022/CS349 (W-22)/CS349Assignment/assignments/cs349/a4/a4-basic/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11666666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="temurin-16" project-jdk-type="JavaSDK" />
+</project>
