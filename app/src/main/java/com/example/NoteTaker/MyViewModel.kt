@@ -11,7 +11,6 @@ class MyViewModel() : ViewModel() {
     val set = "Note Name 1"
     var noteListViewModel: MutableLiveData<MutableList<NoteFormat>> =
         MutableLiveData<MutableList<NoteFormat>>(model.listOfNotes)
-    val noteAddedChanged: MutableLiveData<String> = MutableLiveData()
     var viewAbleNoteList: MutableList<NoteFormat> = mutableListOf()
     val snackBarMessage: MutableLiveData<String> = MutableLiveData()
     var importantFilter = "Important Filter Off"

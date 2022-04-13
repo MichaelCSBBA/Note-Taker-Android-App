@@ -1,7 +1,9 @@
 package com.example.NoteTaker
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.view.*
 import android.widget.LinearLayout
 
@@ -10,7 +12,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     // create view model using delegation
     private val viewModel: MyViewModel by viewModels()
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         var topActionBar = supportActionBar
         setContentView(R.layout.activity_main)
+
+        var tTS: TextToSpeech? = null
 
         // viewModel Observations for snackBar and subtitle NoteCounter
         viewModel.snackBarMessage.observe(this) {
@@ -52,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 }
 
 

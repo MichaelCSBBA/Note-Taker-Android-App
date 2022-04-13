@@ -6,6 +6,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".FragmentAddScreen" android:clickable="true" android:padding="16dp" android:layout_weight="1">
+
+    <Button
+        android:id="@+id/textToSpeechButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Speak"
+        app:layout_constraintBottom_toTopOf="@+id/editButton"
+        app:layout_constraintStart_toStartOf="@+id/editButton" />
+
     <TextView
             android:text="Add New Note"
             android:layout_width="wrap_content"
