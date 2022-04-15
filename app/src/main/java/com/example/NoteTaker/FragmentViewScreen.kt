@@ -68,7 +68,6 @@ class FragmentViewScreen : Fragment(), TextToSpeech.OnInitListener {
             }
         }
 
-
         // Highlights the note as red if it is important.
         if (displaySelectedNote.noteImportant) {
             chipRed.setChipBackgroundColorResource(R.color.lightRed)

@@ -28,12 +28,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addEditImportant" android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent" android:hint="Title"/>
+
     <Button
-            android:text="Save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/saveButton"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -45,5 +48,14 @@
             android:layout_marginTop="32dp" android:hint="Body" app:layout_constraintBottom_toTopOf="@+id/saveButton"
             android:scrollHorizontally="false"
             android:gravity="top|left"/>
+
+    <Button
+        android:id="@+id/speechToTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talk Input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

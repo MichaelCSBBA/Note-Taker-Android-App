@@ -1,18 +1,31 @@
 package com.example.NoteTaker
 
+import android.Manifest
+import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.speech.RecognitionListener
+import android.speech.RecognizerIntent
 import android.util.Log
 import android.view.*
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Switch
-import android.widget.TextView
+import android.widget.*
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import java.util.*
 
 class FragmentAddScreen : Fragment() {
-
+    companion object {
+        private const val REQUEST_CODE_STT = 1
+        lateinit var noteBody: EditText
+        lateinit var noteTitle: EditText
+    }
     private val viewModel: MyViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -21,13 +34,15 @@ class FragmentAddScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+
         // References to Widget Elements
         val root = inflater.inflate(R.layout.fragment_add_screen, container, false)
         val addEditType = root.findViewById<TextView>(R.id.viewNoteId)
         val importantType = root.findViewById<Switch>(R.id.addEditImportant)
-        val noteTitle = root.findViewById<EditText>(R.id.viewTitle)
-        val noteBody = root.findViewById<EditText>(R.id.viewBody)
+        noteTitle = root.findViewById<EditText>(R.id.viewTitle)
+        noteBody = root.findViewById<EditText>(R.id.viewBody)
         val saveButton = root.findViewById<Button>(R.id.saveButton)
+        val speechToText = root.findViewById<Button> (R.id.speechToTextButton)
 
         // Determines if the Add/Edit View is in Add or Edit Mode
         if (viewModel.editModeOrAddMode == "Edit Mode") {
@@ -41,6 +56,23 @@ class FragmentAddScreen : Fragment() {
             addEditType.text = "Add New Note"
             addEditType.text = "Add Mode"
         }
+
+
+        speechToText.setOnClickListener {
+            // Get the Intent action
+            val speechTextIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            speechTextIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            speechTextIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
+            speechTextIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak now!")
+            try {
+                startActivityForResult(speechTextIntent, REQUEST_CODE_STT)
+            } catch (e: ActivityNotFoundException) {
+                e.printStackTrace()
+                Toast.makeText(activity, "Your device does not support STT.", Toast.LENGTH_LONG).show()
+            }
+        }
+
+
 
         // Listener for when save Button is clicked.
         saveButton.setOnClickListener {
@@ -69,5 +101,37 @@ class FragmentAddScreen : Fragment() {
             }
         }
         return root
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            // Handle the result for our request code.
+            REQUEST_CODE_STT -> {
+                // Safety checks to ensure data is available.
+                if (resultCode == Activity.RESULT_OK && data != null) {
+                    // Retrieve the result array.
+                    val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+                    // Ensure result array is not null or empty to avoid errors.
+                    if (!result.isNullOrEmpty()) {
+                        // Recognized text is in the first position.
+                        var recognizedText = result[0]
+                        // Formatting the text into sentences..
+                        var oldBodyText = noteBody.text.toString()
+                        var oldTitleText = noteTitle.text.toString()
+                        if (noteBody.hasFocus()) {
+                            recognizedText = recognizedText.replaceFirstChar { it.uppercase() }
+                            oldBodyText += recognizedText + ". "
+                            noteBody.setText(oldBodyText)
+                        } else {
+                            recognizedText = recognizedText.split(" ")
+                                .joinToString(" ") { it.replaceFirstChar { it.uppercase() } }
+                            oldTitleText += recognizedText + " "
+                            noteTitle.setText (oldTitleText)
+                        }
+                    }
+                }
+            }
+        }
     }
 }

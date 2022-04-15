@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mike/Desktop/Android Projects/noteTaker/NoteTaker/app/src/main/res/layout-land/fragment_add_screen.xml" value="0.5" />
         <entry key="..\:/Users/Mike/Desktop/Android Projects/noteTaker/NoteTaker/app/src/main/res/layout-land/fragment_view_screen.xml" value="0.33" />
         <entry key="..\:/Users/Mike/Desktop/Android Projects/noteTaker/NoteTaker/app/src/main/res/layout/fragment_add_screen.xml" value="0.29375" />
         <entry key="..\:/Users/Mike/Desktop/Android Projects/noteTaker/NoteTaker/app/src/main/res/layout/fragment_view_screen.xml" value="0.33" />
@@ -33,5 +34,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="temurin-16" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="temurin-16" project-jdk-type="JavaSDK" />
 </project>
